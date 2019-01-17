@@ -23,7 +23,7 @@
 
                 for (int i = 0; i < pumpsNumber; i++)
                 {
-                    int[] current = pumps.Dequeue(); //take the infomration about the current pump
+                    int[] current = pumps.Dequeue(); //take the information about the current pump
 
                     petrol += current[0]; //petrol filled
                     petrol -= current[1]; //petrol used
