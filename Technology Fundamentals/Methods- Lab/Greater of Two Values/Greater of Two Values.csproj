@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7BE0660B-8924-44A4-9478-154F31DE004C}</ProjectGuid>
+    <ProjectGuid>{E7AC0CE2-6C5A-4BD7-9DE5-7468DB4A89C2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Greater_of_Two_Values</RootNamespace>
     <AssemblyName>Greater of Two Values</AssemblyName>
