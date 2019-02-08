@@ -42,13 +42,13 @@
             if (cups.Any())
             {
                 Console.WriteLine($"Cups: {string.Join(" ", cups)}");
-                Console.WriteLine($"Wasted litters of water: {wastedWater}");
             }
             else
             {
                 Console.WriteLine($"Bottles: {string.Join(" ", bottles)}");
-                Console.WriteLine($"Wasted litters of water: {wastedWater}");
             }
+            
+            Console.WriteLine($"Wasted litters of water: {wastedWater}");
         }
     }
 }
