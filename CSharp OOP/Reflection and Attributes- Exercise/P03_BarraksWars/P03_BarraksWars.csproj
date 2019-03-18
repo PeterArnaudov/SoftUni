@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Core\Meow\**" />
+    <EmbeddedResource Remove="Core\Meow\**" />
+    <None Remove="Core\Meow\**" />
+  </ItemGroup>
+
+</Project>
