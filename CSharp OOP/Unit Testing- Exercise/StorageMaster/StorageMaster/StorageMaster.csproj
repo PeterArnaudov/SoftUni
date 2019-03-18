@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Core\Entities\**" />
+    <Compile Remove="Entities\Others\**" />
+    <EmbeddedResource Remove="Core\Entities\**" />
+    <EmbeddedResource Remove="Entities\Others\**" />
+    <None Remove="Core\Entities\**" />
+    <None Remove="Entities\Others\**" />
+  </ItemGroup>
+
+</Project>
