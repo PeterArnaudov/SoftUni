@@ -1,12 +1,13 @@
 function solve() {
-    let listInput = JSON.parse(document.getElementById("arr").value);
-    let divResult = $('#result')
+    let inputElement = document.getElementById('arr');
+    let resultElement = document.getElementById('result');
 
-    function calculate(list) {
-        for (let i = 0; i < list.length; i++) {
-            let p = $('<p>');
-            divResult.append(p.text(`${i} -> ${list[i]*list.length}`))
-        }
+    let inputArray = JSON.parse(inputElement.value);
+    let outputArray = inputArray.map(x => x * inputArray.length);
+
+    for (let i = 0; i < outputArray.length; i++) {
+        let p = document.createElement('p');
+        p.textContent = `${i} -> ${outputArray[i]}`;
+        resultElement.appendChild(p);
     }
-    calculate(listInput);
 }
