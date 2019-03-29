@@ -1,21 +1,17 @@
 function solve() {
-    let number = parseInt(document.getElementById("num").value);
-    let listInput = JSON.parse(document.getElementById("arr").value);
-    let answer = [];
+    let searchedElement = document.getElementById('num');
+    let textElement = document.getElementById('arr');
 
-    function calc(searched, input) {
+    let searched = searchedElement.value;
+    let arrays = JSON.parse(textElement.value);
 
-        for (let element of input) {
-            console.log(element);
-            let result = element.includes(searched);
-            let index = element.indexOf(searched);
+    let result = [];
 
-            answer.push(result + ' -> ' + index);
-        }
-
-        return answer;
+    for (let i = 0; i < arrays.length; i++) {
+        let currentSearch = arrays[i].includes(searched) ? `true -> ${arrays[i].indexOf(searched)}` : 'false -> -1';
+        result.push(currentSearch);
     }
 
-    let result = calc(number, listInput);
-    document.getElementById("result").innerHTML = result;
+    let resultElement = document.getElementById('result');
+    resultElement.textContent = result.join(',');
 }
