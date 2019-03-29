@@ -1,15 +1,9 @@
 function solve() {
-    let listInput = JSON.parse(document.getElementById("arr").value);
-    let result = [];
+    let inputElement = document.getElementById('arr');
+    let resultElement = document.getElementById('result');
 
-    function calculate(numArr) {
-        numArr.forEach((element, index) => {
-            if (index % 2 === 0) {
-                result.push(element);
-            }
-        });
-    }
-    calculate(listInput);
-    console.log(result);
-    document.getElementById("result").innerHTML = result.join(' x ');
+    let inputArray = JSON.parse(inputElement.value);
+    let outputArray = inputArray.filter(x => inputArray.indexOf(x) % 2 == 0);
+
+    resultElement.textContent = outputArray.join(' x ');
 }
