@@ -85,7 +85,9 @@ namespace StorageMasterBusinessLogicTests
 
             //Assert
             Assert.IsTrue(storageRegistryValue.ContainsKey(storageName));
-        }[TestMethod]
+        }
+        
+        [TestMethod]
         public void StorageMasterRegisterStorageShouldReturnString()
         {
             //Arrange
