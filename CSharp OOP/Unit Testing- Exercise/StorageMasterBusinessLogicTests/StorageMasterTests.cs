@@ -85,18 +85,41 @@ namespace StorageMasterBusinessLogicTests
 
             //Assert
             Assert.IsTrue(storageRegistryValue.ContainsKey(storageName));
-        }
-
-        [TestMethod]
+        }[TestMethod]
         public void StorageMasterRegisterStorageShouldReturnString()
         {
+            //Arrange
+            var sm = (StorageMaster)Activator.CreateInstance(typeof(StorageMaster));
+            var storageRegistry = sm.GetType().GetField("storageRegistry", BindingFlags.NonPublic | BindingFlags.Instance);
+            var storageRegistryValue = (Dictionary<string, Storage>)storageRegistry.GetValue(sm);
+            var registerStorageMethod = typeof(StorageMaster).GetMethod("RegisterStorage");
+            string storageType = "Warehouse";
+            string storageName = "Name";
 
+            //Act
+            var actual = registerStorageMethod.Invoke(sm, new object[] { storageType, storageName });
+
+            //Assert
+            Assert.IsTrue(actual.GetType() == typeof(string));
         }
 
         [TestMethod]
         public void StorageMasterRegisterStorageShouldReturnCorrectString()
         {
+            //Arrange
+            var sm = (StorageMaster)Activator.CreateInstance(typeof(StorageMaster));
+            var storageRegistry = sm.GetType().GetField("storageRegistry", BindingFlags.NonPublic | BindingFlags.Instance);
+            var storageRegistryValue = (Dictionary<string, Storage>)storageRegistry.GetValue(sm);
+            var registerStorageMethod = typeof(StorageMaster).GetMethod("RegisterStorage");
+            string storageType = "Warehouse";
+            string storageName = "Name";
 
+            //Act
+            var actual = registerStorageMethod.Invoke(sm, new object[] { storageType, storageName });
+
+            //Assert
+            string expected = "Registered Name";
+            Assert.AreEqual(expected, actual);
         }
     }
 }
