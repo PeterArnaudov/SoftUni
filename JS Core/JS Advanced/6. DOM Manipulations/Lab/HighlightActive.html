@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Focus</title>
+    <style>
+        div { width: 470px; }
+        div div {
+            text-align: center;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 15px;
+            border: 1px solid #999;
+        }
+        .focused { background: #999999; }
+    </style>
+    <script src="../jquery-3.4.1.min.js"></script>
+</head>
+<body onload="focus()">
+<div>
+    <div><h1>Section 1</h1><input type="text"/></div>
+    <div><h1>Section 2</h1><input type="text"/></div>
+    <div><h1>Section 3</h1><input type="text"/></div>
+    <div><h1>Section 4</h1><input type="text"/></div>
+</div>
+<script>
+    function focus() {
+        function highlight(event) {
+            $(event.target).parent().addClass('focused');
+        }
+
+        function unHighlight(event) {
+            $(event.target).parent().removeClass('focused');
+        }
+
+        $('div input').focus(highlight);
+        $('div input').blur(unHighlight);
+    }
+</script>
+</body>
+</html>

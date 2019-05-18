@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<h1>List of Items</h1>
+<ul id="items"></ul>
+<input type="text" id="newText" />
+<input type="button" value="Add"
+       onclick="addItem()">
+<script>
+    function addItem() {
+        let item = $('<li>');
+        item.text($('#newText').val() + ' ');
+
+        let deleteButton = $('<a href="#">[Delete]</a>');
+        deleteButton.click(deleteItem);
+
+        item.append(deleteButton);
+
+        $('#items').append(item);
+
+        function deleteItem() {
+            $(this).parent().remove();
+        }
+    }
+</script>
+</body>
+</html>

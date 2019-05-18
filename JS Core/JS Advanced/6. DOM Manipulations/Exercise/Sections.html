@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sections</title>
+    <style>
+        #content {
+            width: 1000px;
+        }
+
+        #content div {
+            float: left;
+            width: 300px;
+            height: 300px;
+            margin: 2em;
+            background: #5555ff;
+            text-align: center;
+        }
+
+        #content div p {
+            color: white;
+            margin: 6em 3em 6em 3em;
+        }
+    </style>
+    <script src="../jquery-3.4.1.min.js"></script>
+</head>
+<div id="content">
+</div>
+<body onload="create(['Section 1', 'Section 2', 'Section 3', 'Section 4']);">
+<script>
+    function create(sentences) {
+        function showParagraph(event) {
+            event.target.getElementsByTagName('p')[0].style.display = 'block';
+        }
+        
+        for (let sentence of sentences) {
+            let div = $('<div>');
+            let paragraph = $('<p>');
+
+            div.click(showParagraph);
+
+            paragraph.text(sentence);
+            paragraph.css('display', 'none');
+
+            paragraph.appendTo(div);
+            div.appendTo($('#content'));
+        }
+    }
+</script>
+</body>
+</html>
