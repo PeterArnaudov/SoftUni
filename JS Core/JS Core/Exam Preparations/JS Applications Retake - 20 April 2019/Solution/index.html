@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CookUni</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- styles -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    <!-- libraries -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="node_modules/sammy/lib/sammy.js"></script>
+    <script src="node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <!-- default scripts -->
+    <script src="scripts/services/app.js"></script>
+    <script src="scripts/services/kinvey.js"></script>
+    <script src="scripts/services/notification.js"></script>
+    <!-- services -->
+    <script src="scripts/services/user-service.js"></script>
+    <script src="scripts/services/recipe-service.js"></script>
+    <!-- handlers -->
+    <script src="scripts/handlers/home-handler.js"></script>
+    <script src="scripts/handlers/user-handler.js"></script>
+    <script src="scripts/handlers/recipe-handler.js"></script>
+</head>
+<body>
+<div id="notifications">
+    <div id="infoBox" class="alert alert-success" role="alert">{Success Message...}</div>
+    <div id="loadingBox" class="alert alert-info" role="alert">Loading...</div>
+    <div id="errorBox" class="alert alert-danger" role="alert">{Error Message...}</div>
+</div>
+<div id="rooter" class="cover-container w-100 d-flex h-100 p-3 mx-auto flex-column">
+</div>
+</body>
+</html>

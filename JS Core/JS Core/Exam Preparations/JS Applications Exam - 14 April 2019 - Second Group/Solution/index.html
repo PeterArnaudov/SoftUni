@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- styles -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="styles/notifications.css">
+    <!-- libraries -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="node_modules/sammy/lib/sammy.js"></script>
+    <script src="node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <!-- default scripts -->
+    <script src="scripts/services/app.js"></script>
+    <script src="scripts/services/kinvey.js"></script>
+    <script src="scripts/services/notification.js"></script>
+    <!-- services -->
+    <script src="scripts/services/user-service.js"></script>
+    <script src="scripts/services/movie-service.js"></script>
+    <!-- handlers -->
+    <script src="scripts/handlers/home-handler.js"></script>
+    <script src="scripts/handlers/user-handler.js"></script>
+    <script src="scripts/handlers/movie-handler.js"></script>
+</head>
+<body>
+<div id="notifications">
+    <div id="loadingBox" class="notification">
+        <span>Loading …</span>
+    </div>
+    <div id="infoBox" class="notification">
+        <span>Info</span>
+    </div>
+    <div id="errorBox" class="notification">
+        <span>Error</span>
+    </div>
+</div>
+<div id="root">
+</div>
+</body>
+</html>

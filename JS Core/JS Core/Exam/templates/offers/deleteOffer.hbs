@@ -1,0 +1,50 @@
+{{> header}}
+<div class="container" style="margin-top:5%; margin-bottom:5%">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card" style="height: auto">
+            <div class="card-header">
+                <h3>Delete offer</h3>
+                <div class="d-flex justify-content-end social_icon">
+                    <span><i class="fab fa-facebook-square"></i></span>
+                    <span><i class="fab fa-google-plus-square"></i></span>
+                    <span><i class="fab fa-twitter-square"></i></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <form action="#/delete/:{{id}}" method="post">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input disabled type="text" class="form-control" placeholder="product" value="{{product}}"
+                               name="product">
+
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <textarea disabled style="height: auto; width: 85%; resize: none;" placeholder="description"
+                                  name="description">{{description}}</textarea>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input disabled type="text" class="form-control" placeholder="price" value="{{price}}" name="price">
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input disabled type="text" class="form-control" placeholder="picture url" value="{{pictureUrl}}"
+                               name="pictureUrl">
+                    </div>
+
+                    <input type="submit" value="Delete" class="btn float-right login_btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer}}
